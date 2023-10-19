@@ -27,17 +27,19 @@ public class Calculator {
 
         public double average(double[] logs) {
                 double sum = 0;
-                for (int i = 0; i < logs.length; i++) {
-                        sum += logs[i];
+                for (double log : logs) {
+                        sum += log;
                 }
                 return (sum / logs.length);
         }
 
         public double variance(double[] logs, double average) {
                 double sum = 0;
-                for (int i = 0; i < logs.length; i++) {
-                        sum += Math.pow(logs[i] - average, 2);
+
+                for (double log : logs) {
+                        sum += Math.pow(log - average, 2);
                 }
+
                 return (sum / (logs.length - 1));
         }
 
