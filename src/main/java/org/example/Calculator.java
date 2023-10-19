@@ -47,6 +47,7 @@ public class Calculator {
         public double standardDeviation(double variance) {
                 return Math.sqrt(variance);
         }
+
         public double[] tracks(double average, double standardDeviation) {
 
                 int qtdTracks = 5;
