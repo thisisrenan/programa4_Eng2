@@ -41,19 +41,22 @@ public class Calculator {
                 }
 
                 return (sum / (logs.length - 1));
+
         }
 
         public double standardDeviation(double variance) {
                 return Math.sqrt(variance);
         }
-
         public double[] tracks(double average, double standardDeviation) {
-                double[] tracksLog = new double[5];
-                tracksLog[0] = average - (2 * standardDeviation);
-                tracksLog[1] = average - (standardDeviation);
-                tracksLog[2] = average;
-                tracksLog[3] = average + (standardDeviation);
-                tracksLog[4] = average + (2 * standardDeviation);
+
+                int qtdTracks = 5;
+                int dif = -((qtdTracks / 2));
+                double[] tracksLog = new double[qtdTracks];
+
+                for (int i = 0; i < qtdTracks; i++) {
+                        tracksLog[i] = (average + (dif * standardDeviation));
+                        dif++;
+                }
 
                 return  tracksLog;
         }
